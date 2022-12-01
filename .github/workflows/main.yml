@@ -6,9 +6,9 @@ name: getproxy
 on: 
   push: 
     branches: [ master ]
-  #schedule:
+  schedule:
     # * is a special character in YAML so you have to quote this string
-    #- cron:  '*/15 * * * *'
+    - cron:  '*/5 * * * *'
   
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     - name: Set up Python 3.5
       uses: actions/setup-python@v2
       with:
-        python-version: 3.5
+        python-version: 3.9
     - name: setup env & install getproxy
       run: |
         git config --global user.name "whoisjeeva"
