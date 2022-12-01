@@ -17,15 +17,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python 3.5
-      uses: actions/setup-python@v2
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v3
       with:
         python-version: 3.9
     - name: setup env & install getproxy
       run: |
         git config --global user.name "whoisjeeva"
         git config --global user.email "mytellee@gmail.com"
-        pip install git+https://github.com/fate0/getproxy.git@master
+        pip3 install git+https://github.com/fate0/getproxy.git@master
 
     - name: run getproxy
       run: |
